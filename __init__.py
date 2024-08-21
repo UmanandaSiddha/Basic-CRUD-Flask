@@ -17,6 +17,5 @@ app.after_request(after_request_func)
 from routes import user_routes
 app.register_blueprint(user_routes.bp)
 
-# Ensure the database tables are created
 with app.app_context():
     db.create_all()
